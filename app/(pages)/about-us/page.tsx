@@ -1,15 +1,20 @@
 import React from 'react'
-import Herosection from '../../components/HeroSection/Herosection'
 import OurStory from '../../components/OurStory/OurStory'
 import OurValue from '../../components/OurValue/OurValue'
-import WhatWeDo from '../../components/Whatwedo/WhatWeDo'
 import Cta from '../../components/Cta/Cta'
+import AboveFold from '../../components/AboveFold/AboveFold'
+import { aboutUsData } from '../../data/aboutUsData'
 
 const About = () => {
   return (
     <div className="min-h-screen ">
       {/* Hero Section */}
-      <Herosection />
+      <AboveFold
+        title={aboutUsData.hero.title}
+        subtitle={aboutUsData.hero.subtitle}
+        ctaText={aboutUsData.hero.ctaText}
+        backgroundImage={aboutUsData.hero.backgroundImage}
+      />
 
       {/* Our Story Section */}
       <OurStory />
@@ -17,7 +22,6 @@ const About = () => {
       <OurValue />
 
       {/* What We Do Section */}
-      <WhatWeDo />
 
       {/* CTA Section */}
       <Cta />

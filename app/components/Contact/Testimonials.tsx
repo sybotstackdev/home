@@ -2,6 +2,10 @@
 import React, { useEffect, useRef } from 'react'
 import Container from '../container/Container'
 import { Star, Quote } from 'lucide-react'
+// import Carousel from '../Carousel/Carousel'
+import dynamic from 'next/dynamic'
+
+const Carousel = dynamic(() => import('../Carousel/Carousel'), { ssr: false })
 
 const Testimonials = () => {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -30,30 +34,87 @@ const Testimonials = () => {
 
     const testimonialsData = [
         {
-            name: "David Martinez",
-            position: "CTO, TechFlow Solutions",
-            company: "TechFlow Solutions",
-            content: "Sybotstack transformed our entire IT infrastructure. Their cloud migration expertise saved us 40% in operational costs while improving our system reliability. The team's professionalism and technical knowledge are outstanding.",
-            rating: 5,
-            image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+          name: "David Martinez",
+          position: "CTO, TechFlow Solutions",
+          company: "TechFlow Solutions",
+          content: "Sybotstack cut our costs and boosted system uptime. Impressive work.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
         },
         {
-            name: "Sarah Williams",
-            position: "Operations Director",
-            company: "Global Retail Corp",
-            content: "Working with Sybotstack has been a game-changer for our business. Their cybersecurity solutions protected us from multiple threats, and their 24/7 support team is always there when we need them.",
-            rating: 5,
-            image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+          name: "Sarah Williams",
+          position: "Operations Director",
+          company: "Global Retail Corp",
+          content: "Their cybersecurity team is fast, reliable, and always on call.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
         },
         {
-            name: "Michael Chen",
-            position: "Founder & CEO",
-            company: "InnovateTech",
-            content: "The IT consulting services from Sybotstack helped us scale our operations efficiently. Their strategic approach and deep industry knowledge made all the difference in our digital transformation journey.",
-            rating: 5,
-            image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+          name: "Michael Chen",
+          position: "Founder & CEO",
+          company: "InnovateTech",
+          content: "Sybotstack's IT strategy helped us scale without stress.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Priya Nair",
+          position: "VP Engineering",
+          company: "NextGen Fintech",
+          content: "Flawless cloud migration and attentive support. Highly recommend.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Alex Rivera",
+          position: "IT Manager",
+          company: "HealthSync",
+          content: "Sybotstack brought structure and speed to our tech stack.",
+          rating: 4,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Lena Gomez",
+          position: "Founder",
+          company: "eCom Hub",
+          content: "Their dev team helped us launch on time and under budget.",
+          rating: 4,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Jason Lee",
+          position: "COO",
+          company: "BuildNet",
+          content: "Quick responses and excellent system integration support.",
+          rating: 4.5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Fatima Ahmad",
+          position: "Security Analyst",
+          company: "DataGuard",
+          content: "Top-tier incident response and proactive threat handling.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Robert Kim",
+          position: "Product Manager",
+          company: "MarketPilot",
+          content: "Their insights drastically improved our backend reliability.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
+        },
+        {
+          name: "Emily Tran",
+          position: "Tech Lead",
+          company: "GreenGrid",
+          content: "A knowledgeable, collaborative, and efficient tech partner.",
+          rating: 5,
+          image: "https://cdn.prod.website-files.com/686d4049ce7f7422269655f3/686d410c75ab9a8ea2a6aef9_46badf08-742e-408e-99c5-1a34c082403c.avif"
         }
-    ];
+      ];
+      
 
     const renderStars = (rating: number) => {
         return Array.from({ length: 5 }, (_, index) => (
@@ -74,13 +135,14 @@ const Testimonials = () => {
                     </p>
                 </div>
                 
-                <div ref={containerRef} className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+                <div ref={containerRef} className='p-2'>
+                    <Carousel>          
                     {testimonialsData.map((testimonial, index) => (
                         <div
                             key={index}
-                            className='testimonial-card opacity-0 transform translate-y-8 transition-all duration-700 ease-out hover:scale-105 group bg-[#051023] rounded-lg p-8  hover:border-blue-500/50'
+                            className='testimonial-card opacity-0 transform translate-y-8 transition-all duration-700 ease-out hover:scale-105 group bg-[#051023] rounded-t-3xl rounded-b-lg p-8 hover:border-blue-500/50 shadow-lg hover:shadow-xl'
                         >
-                            <div className='flex flex-col h-full'>
+                            <div className='flex flex-col h-full pb-2'>
                                 {/* Quote Icon */}
                                 <div className='mb-6'>
                                     <Quote className='text-blue-400 w-8 h-8' />
@@ -118,6 +180,7 @@ const Testimonials = () => {
                             </div>
                         </div>
                     ))}
+                    </Carousel>
                 </div>
                 
                 {/* Call to Action */}

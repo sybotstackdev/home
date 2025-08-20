@@ -144,3 +144,42 @@
 .animate-fade-in-delay-6 { animation-delay: 1.2s; }
 .animate-fade-in-delay-7 { animation-delay: 1.4s; }
 .animate-fade-in-delay-11 { animation-delay: 1.6s; }
+
+/* Carousel */
+.carousel-gap {
+  padding: 0 10px;
+}
+
+/* Fan Carousel 3D Effects */
+.fan-carousel-container {
+  perspective: 1000px;
+  perspective-origin: center;
+}
+
+.fan-carousel-card {
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.fan-carousel-card:hover {
+  transform-style: preserve-3d;
+}
+
+/* Smooth transitions for fan carousel */
+.fan-carousel-transition {
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced 3D shadows for fan carousel */
+.fan-carousel-shadow {
+  box-shadow: 
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.fan-carousel-shadow:hover {
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(59, 130, 246, 0.2);
+} 
