@@ -140,7 +140,7 @@ const Testimonials = () => {
                     {testimonialsData.map((testimonial, index) => (
                         <div
                             key={index}
-                            className='testimonial-card opacity-0 transform translate-y-8 transition-all duration-700 ease-out hover:scale-105 group bg-[#051023] rounded-lg p-8  hover:border-blue-500/50'
+                            className='testimonial-card opacity-0 transform translate-y-8 transition-all duration-700 ease-out hover:scale-105 group bg-[#051023] rounded-t-3xl rounded-b-lg p-8 hover:border-blue-500/50 shadow-lg hover:shadow-xl'
                         >
                             <div className='flex flex-col h-full pb-2'>
                                 {/* Quote Icon */}

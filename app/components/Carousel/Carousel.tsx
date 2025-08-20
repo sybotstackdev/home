@@ -19,7 +19,6 @@ const Carousel = ( {children}: {children: React.ReactNode} ) => {
         responsive={responsive}
         infinite
         autoPlay
-        
         autoPlaySpeed={3000}
         keyBoardControl
         customTransition="transform 300ms ease-in-out"

@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from 'react'
 import Container from '../container/Container'
 import Image from 'next/image'
 import { Linkedin, Mail, Globe } from 'lucide-react'
+import Link from 'next/link'
 
 const Managers = () => {
     const containerRef = useRef<HTMLDivElement>(null)
@@ -26,15 +27,17 @@ const Managers = () => {
     }, [])
     const managersData = [
         {
+          id: "yash-kumar",
           name: "Yash Kumar",
           position: "Chief Executive Officer",
-          image: "/images/managers/shubham.png",
+          image: "/images/managers/yash.webp",
           bio: "Yash is a seasoned full-stack developer and business leader with 15+ years of experience in scaling tech ventures and leading digital strategy.",
           linkedin: "https://linkedin.com/in/yash-kumar",
           email: "yash@example.com",
           website: "https://example.com"
         },
         {
+          id: "shubham-sharma",
           name: "Shubham Sharma",
           position: "Chief Technology Officer",
           image: "/images/managers/shubham.png",
@@ -58,9 +61,8 @@ const Managers = () => {
                 
                 <div ref={containerRef} className='grid md:w-[70%] grid-cols-1 mx-auto md:grid-cols-2 justify-center lg:grid-cols-2 gap-8'>
                     {managersData.map((manager, index) => (
-                        <div
-                            key={index}
-                            className='manager-card opacity-0 transform translate-y-8 transition-all duration-700 ease-out hover:scale-105 group bg-[#051023] rounded-lg p-8 hover:border-blue-500/50'
+                        <div                            key={index}
+                            className='manager-card opacity-0 transform translate-y-8 transition-all duration-700 ease-out hover:scale-105 group bg-[#051023] rounded-lg p-8 hover:border-blue-500/20 block'
                             style={{ transitionDelay: `${index * 200}ms` }}
                         >
                             <div className='flex flex-col items-center text-center'>
@@ -89,30 +91,31 @@ const Managers = () => {
                                 
                                 {/* Social Links */}
                                 <div className='flex space-x-4'>
-                                    <a 
+                                    <Link
                                         href={manager.linkedin}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='p-2 bg-[#121837] rounded-lg hover:bg-blue-600 transition-colors duration-200 group-hover:scale-110'
                                     >
                                         <Linkedin className='text-white' size={20} />
-                                    </a>
-                                    <a 
+                                    </Link>
+                                    <Link 
                                         href={`mailto:${manager.email}`}
                                         className='p-2 bg-[#121837] rounded-lg hover:bg-blue-600 transition-colors duration-200 group-hover:scale-110'
                                     >
                                         <Mail className='text-white' size={20} />
-                                    </a>
-                                    <a 
+                                    </Link>
+                                    <Link 
                                         href={manager.website}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className='p-2 bg-[#121837] rounded-lg hover:bg-blue-600 transition-colors duration-200 group-hover:scale-110'
                                     >
                                         <Globe className='text-white' size={20} />
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
+                            <Link href={`/team/${manager.id}`} className='flex mt-4 justify-center text-center text-blue-400 font-semibold text-sm mb-4'>View More</Link>
                         </div>
                     ))}
                 </div>
