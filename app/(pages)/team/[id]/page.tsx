@@ -466,9 +466,9 @@ const teamData = [
 ];
 
 interface TeamDetailPageProps {
-    params: {
+    params: Promise<{
         id: string
-    }
+    }>
 }
 
 const TeamDetailPage = ({ params }: TeamDetailPageProps) => {
