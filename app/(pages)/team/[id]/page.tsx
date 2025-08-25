@@ -471,8 +471,9 @@ interface TeamDetailPageProps {
     }>
 }
 
-const TeamDetailPage = ({ params }: TeamDetailPageProps) => {
-    const teamMember = teamData.find(m => m.id === params.id)
+const TeamDetailPage = async ({ params }: TeamDetailPageProps) => {
+    const { id } = await params
+    const teamMember = teamData.find(m => m.id === id)
 
     if (!teamMember) {
         return (
