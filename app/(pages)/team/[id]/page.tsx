@@ -2,7 +2,7 @@
 import React from 'react'
 import Container from '../../../components/container/Container'
 import Image from 'next/image'
-import { Linkedin, Mail, Globe, ArrowLeft, MapPin, Award, Briefcase, BookOpen, Users, Calendar, Star, Code, Zap } from 'lucide-react'
+import { Linkedin, Mail, Globe, ArrowLeft, MapPin, Award, Briefcase, BookOpen, Users, Star, Code } from 'lucide-react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 
@@ -480,7 +480,7 @@ const TeamDetailPage = ({ params }: TeamDetailPageProps) => {
                 <Container>
                     <div className="text-center">
                         <h1 className="text-white text-4xl font-bold mb-4">Team Member Not Found</h1>
-                        <p className="text-gray-300 text-lg mb-8">The team member you're looking for doesn't exist.</p>
+                        <p className="text-gray-300 text-lg mb-8">The team member you{"'"}re looking for doesn{"'"}t exist.</p>
                         <Link href="/" className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">
                             Go Home
                         </Link>
@@ -759,7 +759,7 @@ const TeamDetailPage = ({ params }: TeamDetailPageProps) => {
                             Ready to Join Our Team?
                         </h3>
                         <p className="text-gray-300 text-lg mb-6 max-w-2xl mx-auto">
-                            We're always looking for talented individuals to join our team. Let's discuss how you can contribute to our mission.
+                            We{"'"}re always looking for talented individuals to join our team. Let{"'"}s discuss how you can contribute to our mission.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
